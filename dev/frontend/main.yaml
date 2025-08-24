@@ -1,9 +1,9 @@
 # Deployment Manager configuration
 root_dir: /apps
 apps:
-  deployment-manager-frontend-shell:
+  test-frontend-shell:
     type: microfront
-    image: harbor.forge.berger-levrault.com/bl-indus/dm/angular/shell
+    image: #TODO
     version: "develop-bf3ba02a" # branch-develop, commit-bf3ba02a, pipelineId-683301, jobId-2786686
     internal_port: 80
     external_port: 3000
@@ -11,13 +11,13 @@ apps:
 
     env_vars:
       # bl auth
-      BL_AUTH_SERVER_URL: "https://saas.test.auth.berger-levrault.com/auth"
+      BL_AUTH_SERVER_URL: #Keycloak
       BL_AUTH_REALM: saas
-      BL_AUTH_CLIENT_ID: BL_DEPLOYMENT_MANAGER_DEV
-      DEPLOYMENT_MANAGER_BACKEND_URL: "https://dm-api-migration-dev.wemagnus.berger-levrault.net"
-  deployment-manager-frontend-migration-mfe:
+      BL_AUTH_CLIENT_ID: #todo
+      DEPLOYMENT_MANAGER_BACKEND_URL: #URL
+  test-frontend-migration-mfe:
     type: microfront
-    image: harbor.forge.berger-levrault.com/bl-indus/dm/angular/deployment-manager/migration
+    image: #TODO
     version: "develop-bf3ba02a" # branch-develop, commit-bf3ba02a, pipelineId-683301, jobId-2786687
     internal_port: 80
     external_port: 3001
@@ -25,6 +25,6 @@ apps:
 
     env_vars:
       # bl auth
-      BL_AUTH_SERVER_URL: "https://saas.test.auth.berger-levrault.com/auth"
+      BL_AUTH_SERVER_URL: #keyclaok
       BL_AUTH_REALM: saas
-      BL_AUTH_CLIENT_ID: BL_DEPLOYMENT_MANAGER_DEV
+      BL_AUTH_CLIENT_ID: #URL
